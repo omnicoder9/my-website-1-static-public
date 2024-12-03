@@ -106,4 +106,21 @@ body {
       width: 80%;
     }
   }
+
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* background: rgba(0, 0, 0, 0.8); */
+  }
+  .carousel img {
+    display: none;
+    width: 100%;
+  }
+  .carousel img.active {
+    display: block;
+  }
+  
   
