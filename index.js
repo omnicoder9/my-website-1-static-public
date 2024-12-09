@@ -26,3 +26,4 @@ setInterval(() => {
   slides[currentSlide].classList.add('active');
 }, 3000);
 
+console.log("the js is working")
