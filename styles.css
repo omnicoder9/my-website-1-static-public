@@ -129,20 +129,55 @@ body {
     z-index: 1000;
     /* background: rgba(0, 0, 0, 0.8); */
   }
- 
+
   .carousel {
     position: relative;
-    height: 750px; /* Replace with the height of your tallest image */
+    height: 600px; /* Adjust this to your desired height or remove to let images dictate height */
     overflow: hidden; /* Ensures content outside this height is not visible */
+    display: flex;
+    align-items: center; /* Center images vertically */
+    justify-content: center; /* Center images horizontally */
+    background-color: #000; /* Add a background color to fill empty space if needed */
   }
+  
   .carousel img {
     display: none;
-    width: 100%;
-    height: 100%; /* Ensure all images scale to fit the container */
-    object-fit: cover; /* Ensures images maintain their aspect ratio */
+    width: auto; /* Allow width to adjust automatically */
+    height: 100%; /* Ensure the height fits within the container */
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
   }
+  
   .carousel img.active {
     display: block;
   }
   
+ 
+  /* .carousel {
+    position: relative;
+    height: 900px; 
+    overflow: hidden; 
+  }
+  .carousel img {
+    display: none;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+  }
+  .carousel img.active {
+    display: block;
+  } */
   
+  /* .carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease; 
+  }
+  .carousel img.active {
+    opacity: 1;
+    z-index: 1;
+  } */
