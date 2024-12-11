@@ -6,14 +6,28 @@ body {
     color: #333;
   }
   
-  header {
+  /* header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(to right, #6a11cb, #2575fc);
     color: #fff;
     padding: 1rem 2rem;
+  } */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 1rem 2rem;
+    box-sizing: border-box; /* Prevent padding from affecting width */
   }
+  
   
   header .logo {
     font-size: 1.5rem;
@@ -115,9 +129,17 @@ body {
     z-index: 1000;
     /* background: rgba(0, 0, 0, 0.8); */
   }
+ 
+  .carousel {
+    position: relative;
+    height: 750px; /* Replace with the height of your tallest image */
+    overflow: hidden; /* Ensures content outside this height is not visible */
+  }
   .carousel img {
     display: none;
     width: 100%;
+    height: 100%; /* Ensure all images scale to fit the container */
+    object-fit: cover; /* Ensures images maintain their aspect ratio */
   }
   .carousel img.active {
     display: block;
